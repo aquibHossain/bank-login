@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-red-100">
+  <section class="mt-10 w-9/12 mx-auto">
+    <h1 class="text-center font-bold text-6xl p-10">Check Your Balance</h1>
+    <div class="grid grid-cols-3 gap-4  text-white">
+        <div class="bg-blue-300 p-8 rounded-lg">
+              <h2 class=" font-medium text-center text-2xl">Deposit</h2>
+              <h3 class=" font-medium text-center text-4xl ">$ <span id="deposit-amount">00</span></h3>
+        </div>
+        <div class="bg-yellow-300 p-8 rounded-lg">
+              <h2 class=" font-medium text-center text-2xl">Withdraw</h2>
+              <h3 class=" font-medium  text-center text-4xl ">00$</h3>
+        </div>
+        <div class="bg-green-300 p-8 rounded-lg">
+              <h2 class=" font-medium text-center text-2xl">Balance</h2>
+              <h3 class=" font-medium text-center text-4xl ">$ <span id="balance">800</span></h3>
+        </div>
+    </div>
+
+    <!-- Deposit section  -->
+
+    <div class="grid grid-cols-2 gap-4 mt-10">
+        <div class="bg-pink-300 p-8 rounded-lg space-y-4 ">
+            <h2 class=" font-medium text-center text-2xl">Please Deposit</h2>
+            <input class="block  mx-auto w-2/4 border-2 border-gray-400 rounded-xl text-center outline-none" placeholder="Deposit" id="deposit" type="text">
+            <button id="deposit-button" class="bg-red-100 block mx-auto border-2 border-gray-400 rounded-xl px-5 py-1 font-medium">Deposit</button> 
+        </div>
+        <div class="bg-indigo-300 p-8 rounded-lg space-y-4 ">
+            <h2 class=" font-medium text-center text-2xl">Please Withdraw</h2>
+            <input class="block  mx-auto w-2/4 border-2 border-gray-400 rounded-xl text-center outline-none" placeholder="Withdraw" id="withdraw" type="text">
+            <button id="withdraw-button" class="bg-red-100 block mx-auto border-2 border-gray-400 rounded-xl px-5 py-1 font-medium">Withdraw</button> 
+        </div>
+    </div>
+  </section>  
+ <script src="bank2.js"></script>
+</body>
+</html>
