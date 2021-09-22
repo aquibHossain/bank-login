@@ -1,7 +1,4 @@
 
-const withdraw=document.getElementById("withdraw");
-
-const withdraws=withdraw.value;
 
 
 
@@ -21,5 +18,18 @@ document.getElementById("deposit-button").addEventListener('click',function () {
     balance.innerText=totalBalance
 })
 document.getElementById("withdraw-button").addEventListener("click",function () {
-    console.log(withdraw.value);
+const withdraw=document.getElementById("withdraw");
+const withdraws=withdraw.value;
+const withdrawAmount=document.getElementById("withdraw-amount");
+const prevwithdraw=withdrawAmount.innerText;
+const totalwithdraw=parseInt(prevwithdraw)+parseInt(withdraws);
+withdrawAmount.innerText=totalwithdraw;
+withdraw.value=""
+ 
+// balance after withdraw 
+const balanceBeforeWithdraw=balance.innerText
+const currentBalance=parseInt(balanceBeforeWithdraw)-parseInt(withdraws) 
+balance.innerText=currentBalance
+
+    
 })
